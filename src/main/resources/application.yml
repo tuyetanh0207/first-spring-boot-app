@@ -1,9 +1,7 @@
 
 spring:
-  profiles:
-    active: postgres
   datasource:
-    url: jdbc:postgresql://localhost:32768/customer
+    url:  jdbc:postgresql://localhost:32768/customer
     username:   tuyetanh0207
     password: postgrespw
     driver-class-name: org.postgresql.Driver
@@ -17,5 +15,7 @@ spring:
     show_sql: true
   main:
     web-application-type: servlet
+  profiles:
+    active: production
 server:
   port: 8080

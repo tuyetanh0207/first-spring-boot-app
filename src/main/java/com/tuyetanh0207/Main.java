@@ -1,5 +1,5 @@
 package com.tuyetanh0207;
-
+import java.sql.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,14 +11,15 @@ import org.springframework.boot.autoconfigure.jdbc.*;
 import org.springframework.boot.autoconfigure.orm.jpa.*;
 import java.util.List;
 
-@Configuration
-@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
-@ComponentScan
-//@SpringBootApplication
+//@Configuration
+//@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+//@ComponentScan
+@SpringBootApplication
 @RestController
 public class Main {
     public static void main(String[] args) {
         //System.out.println("Hello world!");
+      //  System.setProperty("spring.profiles.default", "production");
 
         SpringApplication.run(Main.class, args);
     }
