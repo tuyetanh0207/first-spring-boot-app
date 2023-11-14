@@ -1,0 +1,21 @@
+
+spring:
+  profiles:
+    active: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:32768/customer
+    username:   tuyetanh0207
+    password: postgrespw
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show_sql: true
+  main:
+    web-application-type: servlet
+server:
+  port: 8080
